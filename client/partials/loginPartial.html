@@ -1,0 +1,7 @@
+<div id="login">
+  <h4>Enter a name to continue:</h4><br>
+  <form ng-submit='loginUser()'>
+    <input type="text" ng-model='newUser.name' placeholder="{{errors.name.message}}">
+    <input type="submit" value="Enter">
+  </form>
+</div>
