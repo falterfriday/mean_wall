@@ -1,0 +1,47 @@
+* {
+  font-family: arial;
+}
+body {
+  background-color: white;
+}
+#wrapper {
+  background-color: #f1f1f1;
+  margin-top: 1rem;
+  width: 90%;
+  margin-left:auto;
+  margin-right:auto;
+  padding: 2rem;
+}
+hr {
+  margin: 0px;
+}
+form {
+display: inline-block;
+text-align: right;
+}
+h1 {
+  display: inline-block;
+}
+h4, h3 {
+  margin: 12px 0px;
+}
+#login {
+  /*border: solid black 1px;*/
+  padding: 5rem;
+  margin: auto;
+  text-align: center;
+}
+#post {
+  margin: auto;
+  /*text-align: center;*/
+}
+#right {
+  float: right;
+  /*margin-right: 2rem;*/
+}
+.message, .comment {
+  /*border: solid black 1px;*/
+  width: 90%;
+  margin: auto;
+  padding:1rem;
+}
