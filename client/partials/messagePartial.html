@@ -1,0 +1,30 @@
+<div id="wrapper">
+  <h1>Full MEAN Wall</h1>
+    <div id="right">
+    Welcome, {{user.name}}!
+    <button class="button alert" ng-click='logout()'>Sign Out!</button>
+    </div>
+  <hr>
+
+  <div id="post">
+    <h4>Post a message:</h4>
+      <form ng-submit='createMessage()'>
+        <textarea rows="3" cols="100" ng-model='newMessage.message'></textarea><br>
+        <input type="submit" class="button" value="Post a message">
+      </form>
+  </div>
+  <hr>
+  <div class="message" ng-repeat='message in messages | orderBy: "createdAt":true track by message._id'>
+    <h4>{{message.name}} @ {{message.createdAt | date : "h:mm a MM/dd/yyyy"}}</h4>
+    <h5>{{message.message}}</h5>
+      <div class="comment" ng-repeat='comment in message._comments | orderBy: "createdAt" '>
+        <p>{{comment.name}} @ {{comment.createdAt | date : "h:mm a MM/dd/yyyy"}}</p>
+        <h6>{{comment.comment}}</h6>
+      </div>
+
+    <form ng-submit='createComment(message._id)'>
+      <input type="text" ng-model='messages[message._id].comment'>
+      <input type="submit" value="Post a comment">
+    </form>
+  </div>
+</div>
